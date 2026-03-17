@@ -1,78 +1,149 @@
-# Sesión 3 — Deploy: sube tu oráculo al mundo 🔮
+# Sesión 3 — Deploy: sube tu oráculo al mundo 
 
-**Taller:** Oráculos  
-**Fecha:** <!-- agregar fecha -->  
-**Duración:** 2.5 – 3 horas  
-**Facilitador/a:** <!-- nombre -->
-
----
+Revisión de proyectos.
 
 ## Objetivos
 
-- Comprender qué significa "publicar" un proyecto en la web
+Revisar
+- Revisaremos los oráculos en desarrollo. 
+- Compartiremos avances, dudas y feedback entre el grupo.
+
+Publicar
+- A qué nos referimos cuando hablamos de publicar un proyecto en la web.
 - Identificar qué plataforma se adapta mejor a cada tipo de oráculo
 - Lograr que cada participante tenga al menos una URL pública funcionando
 - Dejar documentado el proceso en el repo para futuras referencias
-
----
 
 ## Agenda
 
 | Tiempo | Bloque |
 |--------|--------|
 | 0:00 – 0:30 | Revisión de proyectos — ronda rápida |
-| 0:30 – 0:50 | Mini-charla: anatomía del deploy |
-| 0:50 – 1:40 | Las rutas — demo en vivo por plataforma |
+| 0:30 – 0:50 | Trabajo por pares / equipos |
+| 0:50 – 1:40 | Charla: Publiquemos nuestro proyectos |
 | 1:40 – 2:15 | Manos a la obra — práctica acompañada |
 | 2:15 – 2:30 | Cierre, URLs y tarea |
 
 ---
 
-## Pregunta guía para la ronda inicial
+## Ejercicio de mapeo de proyectos 
+¿Qué necesita tu oráculo para vivir en la web?
 
-> **¿Qué necesita tu oráculo para vivir en la web?**
+> **Completa la frase:** Mi oráculo responde a __________ y para eso necesita __________.
 
-Cada participante responde en ~3 minutos. No es revisión técnica sino mapeo:  
-tipo de proyecto · lenguajes usados · expectativas de interacción con el usuario.
+Compartir en el chat o en voz alta lo siguiente: 
+- tipo de proyecto 
+- lenguajes usados  
+- expectativas de interacción con el usuario
+
+
+Esto nos ayudará a entender mejor las necesidades técnicas de cada proyecto y a elegir la plataforma de deploy más adecuada.
+
+Si somos pocos asistentes, en 1 min por participante compartir:
+- Nombre del oráculo
+- Qué pregunta responde
+- Cómo funciona (cartas, frases, algoritmo, etc.)
 
 ---
+## Trabajo por pares 
 
-## Mini-charla: anatomía del deploy
+Anotar en el chat:
+- Quiénes ya tienen prototipo
+- Quiénes solo tienen concepto
+
+- ¿Cómo funciona tu oráculo?
+- Tengo algún bloqueo, si sí,  ¿en dónde o en qué parte del proceso?  
+- ¿Qué parte del oráculo es más interesante?
+- ¿Qué podría hacerlo más claro o potente?
+- ¿Qué interacción podría mejorar?
+
+Qué tipo de oráculos aparecieron. 
+- Oráculos tipo carta (visualización, texto, audio)
+- Oráculos tipo experiencia (narrativa, multimedia, interactiva)
+- Oráculos tipo algoritmo (respuestas generadas a partir de inputs)
+- Oráculos tipo comunidad (respuestas basadas en contribuciones de usuarios)
+
+¿Consideras que tu proyecto es poético, aleatoorio, generativo, visual, interactivo, electrónico, narrativo?
+
+## Charla: Publiquemos nuestro proyectos 
 
 Conceptos clave a cubrir antes de las demos:
 
-- **¿Qué es publicar en la web?** Servidor + dominio + URL pública
-- **Archivos estáticos vs. apps con backend**
-  - Estático: HTML, CSS, JS puro → casi cualquier host lo soporta
-  - Backend: Python, bases de datos, lógica en servidor → necesita entorno de ejecución
+**¿Qué es publicar en la web?** 
+- Servidor
+- Dominio 
+- URL pública
+
+
+**Archivos estáticos / apps con backend**
+  - Estático: HTML, CSS, JS puro → casi cualquier host lo soporta.
+  - Backend: Python, bases de datos, lógica en servidor → necesita entorno de ejecución.
 - **Por qué importa la diferencia:** no todas las plataformas soportan todo tipo de proyecto
 
 ---
 
 ## Las rutas — plataformas de deploy
 
-### 🐙 GitHub Pages
+### GitHub Pages
 **Para:** sitios estáticos, JS puro, proyectos narrativos en HTML  
-**Gratis:** sí · **Dominio:** `usuario.github.io/repo`
+**Gratis:** sí  
+**Dominio:** `usuario.github.io/repo`
+
 
 **Pasos básicos:**
-1. Tener el proyecto en un repositorio de GitHub
-2. Ir a `Settings → Pages`
-3. Elegir la rama (`main`) y carpeta (`/root` o `/docs`)
-4. Guardar — en unos minutos aparece la URL
+1. Crear cuenta en
+https://github.com
+
+2. Crear repositorio
+nombre: `oraculo` (o el que quieras)
+
+3. Subir archivos
+  - `index.html`
+  - `sketch.js` (si optaste por la opción de p5)
+
+4. Ir a **Settings → Pages**
+
+6. Activar **Deploy from branch**
+
+7. URL final: `https://usuario.github.io/oraculo`
+
 
 **Consideraciones:**
 - Solo archivos estáticos (no corre Python ni bases de datos)
 - Ideal para oráculos tipo carta/visualización en JS
 - Se puede conectar un dominio propio
-
+   
 **Recursos:**
 - [Documentación oficial de GitHub Pages](https://docs.github.com/en/pages)
-- Ejemplo en este repo: [`/src/ejemplos-de-codigo/github-pages-basico/`](../src/)
+
+
+---
+### Vercel — Guía rápida de deploy
+
+**Para:** proyectos JS, React, Next.js, Vue, Svelte    
+**Gratis:** plan hoobby
+**Dominio:** `proyecto.vercel.app`
+
+**Pasos básicos:**
+
+1. Ir a https://vercel.com
+2. Conectar tu cuenta de GitHub
+3. Importar tu repositorio `oraculo`
+4. Deploy automático (Vercel detecta el framework)
+5. URL final: `https://usuario.vercel.app/oraculo`
+
+**Ventajas:**
+- Deploy automático desde GitHub con cada push
+- Excelente para oráculos con componentes interactivos modernos
+- Soporta funciones serverless (pequeña lógica de backend sin servidor propio)
+- Sin configuración: detecta el framework y hace el build solo
+
+**Recursos:**
+- [vercel.com](https://vercel.com)
 
 ---
 
-### 🌐 WordPress
+### WordPress
 **Para:** proyectos narrativos, arte digital, oráculos tipo revista o experiencia editorial  
 **Gratis:** plan básico disponible · **Dominio:** `proyecto.wordpress.com`
 
@@ -93,20 +164,6 @@ Conceptos clave a cubrir antes de las demos:
 - Formularios: WPForms, Contact Form 7
 - Galerías y multimedia: Envira Gallery, Smash Balloon
 - Audio/video: AudioIgniter, YouTube Embed
-
----
-
-### ▲ Vercel
-**Para:** proyectos JS, React, Next.js, Vue, Svelte  
-**Gratis:** plan hobby generoso · **Dominio:** `proyecto.vercel.app`
-
-- Deploy automático desde GitHub/GitLab con cada push
-- Excelente para oráculos con componentes interactivos modernos
-- Soporta funciones serverless (pequeña lógica de backend sin servidor propio)
-- Sin configuración: detecta el framework y hace el build solo
-
-**Recursos:**
-- [vercel.com](https://vercel.com)
 
 ---
 
