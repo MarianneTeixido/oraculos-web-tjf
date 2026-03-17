@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>p5.js · Frase del día</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; background: #000; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script>
+// ─── Frases cargadas desde JSON ──────────────────────────────────────────────
+let frases     = [];
+let jsonCargado = false;
+let jsonError   = false;
+
+async function cargarFrases() {
+  try {
+    const res  = await fetch('frases.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    frases     = data.frases;
+    jsonCargado = true;
+    dispararFrase();                // lanzar primera frase al cargar
+  } catch (e) {
+    console.error('No se pudo cargar frases.json:', e);
+    jsonError = true;
+    // Fallback por si el JSON no está disponible
+    frases = ["⚠ No se pudo cargar frases.json", "Asegúrate de servirlo junto al HTML."];
+    jsonCargado = true;
+    dispararFrase();
+  }
+}
+
+// ─── Variables globales ──────────────────────────────────────────────────────
+let vid;
+let frase        = "";
+let fraseTarget  = "";
+let charIndex    = 0;
+let typeTimer    = 0;
+let btnX, btnY, btnW, btnH;
+let hoveringBtn  = false;
+let btnScale     = 1;
+let particles    = [];
+let bgAlpha      = 0;        // fade-in inicial
+let overlayPulse = 0;
+
+// ─── Clase partícula ─────────────────────────────────────────────────────────
+class Particle {
+  constructor(x, y) {
+    this.x  = x;
+    this.y  = y;
+    this.vx = random(-3, 3);
+    this.vy = random(-5, -1);
+    this.life = 255;
+    this.size = random(4, 10);
+    this.col = color(random(180,255), random(100,200), random(200,255), 220);
+  }
+  update() {
+    this.x    += this.vx;
+    this.y    += this.vy;
+    this.vy   += 0.12;
+    this.life -= 6;
+    this.size *= 0.97;
+  }
+  draw() {
+    noStroke();
+    fill(red(this.col), green(this.col), blue(this.col), this.life);
+    ellipse(this.x, this.y, this.size);
+  }
+  isDead() { return this.life <= 0; }
+}
+
+// ─── Setup ───────────────────────────────────────────────────────────────────
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  textFont('Georgia');
+
+  // Video de Pexels vía URL directa (libre de derechos)
+  vid = createVideo(
+    'https://www.pexels.com/video/854100/download/',
+    () => {
+      vid.loop();
+      vid.volume(0);
+      vid.hide();
+    }
+  );
+
+  // Dimensiones del botón
+  btnW = 220;
+  btnH = 54;
+  btnX = width  / 2 - btnW / 2;
+  btnY = height * 0.72;
+
+  // Cargar frases desde JSON (la primera frase se dispara al terminar la carga)
+  cargarFrases();
+}
+
+// ─── Draw ────────────────────────────────────────────────────────────────────
+function draw() {
+  // ── Fondo: video o degradado de emergencia ──
+  if (vid.loadedmetadata) {
+    image(vid, 0, 0, width, height);
+  } else {
+    // degradado animado si el video aún carga
+    let t = frameCount * 0.005;
+    for (let y = 0; y < height; y += 2) {
+      let c = lerpColor(
+        color(10 + 30*sin(t), 0, 40 + 20*cos(t*0.7)),
+        color(0, 10, 60 + 30*sin(t*1.3)),
+        y / height
+      );
+      stroke(c);
+      line(0, y, width, y);
+    }
+  }
+
+  // ── Overlay oscuro para legibilidad ──
+  overlayPulse = sin(frameCount * 0.02) * 10;
+  noStroke();
+  fill(0, 0, 0, 130 + overlayPulse);
+  rect(0, 0, width, height);
+
+  // ── Fade-in inicial ──
+  if (bgAlpha < 255) {
+    bgAlpha = min(bgAlpha + 3, 255);
+  }
+
+  // ── Partículas ──
+  for (let i = particles.length - 1; i >= 0; i--) {
+    particles[i].update();
+    particles[i].draw();
+    if (particles[i].isDead()) particles.splice(i, 1);
+  }
+
+  // ── Título superior ──
+  drawTitulo();
+
+  // ── Frase animada (typewriter) ──
+  drawFrase();
+
+  // ── Botón ──
+  drawBoton();
+
+  // ── Aplicar alpha global al iniciar ──
+  fill(0, 0, 0, 255 - bgAlpha);
+  noStroke();
+  rect(0, 0, width, height);
+}
+
+// ─── Título ──────────────────────────────────────────────────────────────────
+function drawTitulo() {
+  let t = frameCount * 0.03;
+
+  // Sombra brillante animada
+  drawingContext.shadowBlur  = 30 + 10 * sin(t);
+  drawingContext.shadowColor = 'rgba(160,120,255,0.8)';
+
+  textAlign(CENTER, TOP);
+  textSize(width < 600 ? 28 : 42);
+  textStyle(BOLD);
+
+  // Letras con gradiente manual: tono dorado–lavanda
+  fill(255, 220 + 20*sin(t), 150 + 50*cos(t));
+  text("✦  Oráculo de Frases  ✦", width / 2, height * 0.08);
+
+  // Sub-línea decorativa
+  drawingContext.shadowBlur = 0;
+  stroke(255, 200, 255, 80);
+  strokeWeight(1);
+  let lw = width * 0.35;
+  line(width/2 - lw, height * 0.08 + 58, width/2 + lw, height * 0.08 + 58);
+  noStroke();
+}
+
+// ─── Frase con efecto typewriter ─────────────────────────────────────────────
+function drawFrase() {
+  let cy = height * 0.48;
+
+  // Fondo suave tipo tarjeta
+  let cardW = min(width * 0.78, 700);
+  let cardH = 110;
+  noStroke();
+  fill(255, 255, 255, 18);
+  drawingContext.shadowBlur  = 40;
+  drawingContext.shadowColor = 'rgba(200,160,255,0.3)';
+  rect(width/2 - cardW/2, cy - cardH/2 - 10, cardW, cardH, 16);
+  drawingContext.shadowBlur = 0;
+
+  // Mostrar "Cargando..." si el JSON aún no llegó
+  if (!jsonCargado) {
+    let puntos = '.'.repeat((frameCount % 60 < 20 ? 1 : frameCount % 60 < 40 ? 2 : 3));
+    fill(200, 180, 255, 180);
+    textAlign(CENTER, CENTER);
+    textSize(18);
+    textStyle(ITALIC);
+    text('Cargando frases' + puntos, width/2, cy);
+    return;
+  }
+
+  // Avanzar caracteres
+  if (charIndex < fraseTarget.length) {
+    typeTimer++;
+    if (typeTimer % 3 === 0) {
+      charIndex++;
+      frase = fraseTarget.substring(0, charIndex);
+    }
+  }
+
+  // Cursor parpadeante
+  let cursor = (charIndex < fraseTarget.length || frameCount % 40 < 20) ? "|" : "";
+
+  drawingContext.shadowBlur  = 14;
+  drawingContext.shadowColor = 'rgba(255,255,255,0.5)';
+  fill(255, 255, 255, 230);
+  textAlign(CENTER, CENTER);
+  textStyle(NORMAL);
+  textSize(width < 600 ? 17 : 22);
+  text(frase + cursor, width/2, cy);
+  drawingContext.shadowBlur = 0;
+}
+
+// ─── Botón ───────────────────────────────────────────────────────────────────
+function drawBoton() {
+  hoveringBtn = mouseX > btnX && mouseX < btnX + btnW &&
+                mouseY > btnY && mouseY < btnY + btnH;
+
+  // Animación suave de escala
+  let targetScale = hoveringBtn ? 1.06 : 1;
+  btnScale = lerp(btnScale, targetScale, 0.12);
+
+  push();
+  translate(btnX + btnW/2, btnY + btnH/2);
+  scale(btnScale);
+
+  // Sombra
+  drawingContext.shadowBlur  = hoveringBtn ? 35 : 18;
+  drawingContext.shadowColor = 'rgba(180,100,255,0.7)';
+
+  // Relleno del botón
+  if (hoveringBtn) {
+    fill(160, 90, 255);
+  } else {
+    fill(100, 50, 200);
+  }
+  noStroke();
+  rect(-btnW/2, -btnH/2, btnW, btnH, 30);
+
+  // Brillo superior
+  fill(255, 255, 255, 30);
+  rect(-btnW/2, -btnH/2, btnW, btnH/2, 30, 30, 0, 0);
+
+  drawingContext.shadowBlur = 0;
+
+  // Texto del botón
+  fill(255);
+  textAlign(CENTER, CENTER);
+  textSize(16);
+  textStyle(BOLD);
+  text("✦  Nueva Frase  ✦", 0, 0);
+
+  pop();
+
+  cursor(hoveringBtn ? HAND : ARROW);
+}
+
+// ─── Disparar frase nueva ────────────────────────────────────────────────────
+function dispararFrase() {
+  let nueva = random(frases);
+  // Evitar repetir la misma
+  while (nueva === fraseTarget && frases.length > 1) {
+    nueva = random(frases);
+  }
+  fraseTarget = nueva;
+  frase       = "";
+  charIndex   = 0;
+  typeTimer   = 0;
+
+  // Explosión de partículas en el botón
+  for (let i = 0; i < 25; i++) {
+    particles.push(new Particle(btnX + btnW/2, btnY + btnH/2));
+  }
+}
+
+// ─── Clic en botón ───────────────────────────────────────────────────────────
+function mousePressed() {
+  if (mouseX > btnX && mouseX < btnX + btnW &&
+      mouseY > btnY && mouseY < btnY + btnH) {
+    dispararFrase();
+  }
+}
+
+// ─── Responsivo ──────────────────────────────────────────────────────────────
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  btnX = width  / 2 - btnW / 2;
+  btnY = height * 0.72;
+}
+</script>
+</body>
+</html>
