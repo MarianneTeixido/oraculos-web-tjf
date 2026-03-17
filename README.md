@@ -4,7 +4,7 @@ Marzo 2026
 
 Por Marianne Teixidó
 
-![Oráculos](./assets/oraculos.png)
+![Oráculos](./img/oraculos.png)
 
 ## Descripción
 
