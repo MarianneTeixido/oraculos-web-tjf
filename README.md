@@ -4,6 +4,8 @@ Marzo 2026
 
 Por Marianne Teixidó
 
+![Oráculos](./assets/oraculos.png)
+
 ## Descripción
 
 Este taller propone la creación de oráculos transjackfeminista en la web, utilizando herramientas como p5.js, JavaScript y Hydra. El objetivo es desarrollar piezas recombinantes que activen imaginarios otros, a partir de narrativas posthumanas, situadas e interseccionales. Se combinarán elementos de mito, magia, ciencia ficción feminista y experiencias personales para pensar la tecnología desde saberes mestizos, ancestrales, indígenas y latinoamericanos. Usando p5.js, JavaScript y Hydra, pero no limitado a estas, se desarrollarán piezas recombinantes que activen imaginarios otros. 
