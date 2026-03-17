@@ -132,14 +132,15 @@ Muchos sistemas funcionan como interfaces de consulta simbólica:
 
 ### África
 - **Ifa Yoruba:** [Centro Yoruba](https://centroyoruba.blogspot.com/2014/02/el-sistema-oracular-de-osha-ifa.html)
-- **Shipibo-Conibo:** [Textiles Shipibo](https://es.xapiriground.org/design-heritage/shipibo-textiles)
+
 
 ### América
 - **Candomblé brasileño:** Las *mães de santo* ("madres de santo") como **Mãe Menininha do Gantois** (1894–1986) y **Mãe Stella de Oxóssi** (1925–2018) ejercieron autoridad oracular y política simultáneamente, resistiendo la persecución del estado.
 - **Cihuateteo:** (Deidades femeninas aztecas)
 - **Los tonalpouhque:** Eran intérpretes del *tonalpohualli* (calendario adivinatorio de 260 días)
 - **Adivinación con semillas:** Norte de Perú, región mixteca. [Revista Cuicuilco](https://revistas.inah.gob.mx/index.php/cuicuilco/article/view/3948/3828)
-
+- **Shipibo-Conibo:** [Textiles Shipibo](https://es.xapiriground.org/design-heritage/shipibo-textiles)
+  
 ### Asia
 
 **China**
