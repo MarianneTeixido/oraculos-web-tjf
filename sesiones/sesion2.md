@@ -175,7 +175,8 @@ El link debe terminar en la extensión del archivo:
 
 ### Disclaimer importante ⚠️
 
-> Este es un espacio de experimentación. No necesitas saber programar para crear un oráculo. El código es una herramienta más, como el bordado, la cocina o la escritura. Si es tu primera vez con p5.js, bienvenida: aquí se aprende haciendo, equivocándose y preguntando.    
+> Este es un espacio de experimentación. No necesitas saber programar para crear un oráculo. El código es una herramienta más, como el bordado, la cocina o la escritura. Si es tu primera vez con p5.js, bienvenida: aquí se aprende haciendo, equivocándose y preguntando.
+
 > Estos ejercicio los trabajé de la siguiente forma. Le pasé un codigo, sencillo pero funcional (de los primero ejemplos puestos acá) hecho por mi a Claude. Me fue devolviendo los ejercicios template de los cuales a no todos los modifiqué el contenido. Lo importante de los proyectos que hagan, más allá del código o las herramientas, es lo que dice su oráculo, con sus imágenes, textos, sonidos, procesos. Ahí esta la magia de verdad. <3 
 ---
 
