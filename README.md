@@ -28,5 +28,5 @@ El taller se desarrollará a través de sesiones teórico-prácticas, donde se c
 ## Sesiones 
 [ X ] [Sesion 1](./sesiones/sesion1.md) | Introducción, oráculos como sistema de adivianación y narrativa transjackfeminista.  
 [ X ] [Sesion 2](./sesiones/sesion2.md) | Hipersticiones, herramientas y tecnologías para la creación de oráculos web. Desarrollo de piezas.  
-[  ] [Sesion 3](./sesiones/sesion3.md) | Revisión de proyectos. Deploy: subir tu oráculo al mundo.   
+[ X ] [Sesion 3](./sesiones/sesion3.md) | Revisión de proyectos. Deploy: subir tu oráculo al mundo.   
 [ ] [Sesion 4](./sesiones/sesion4.md) | Compartición de oráculos creados y reflexión crítica sobre el proceso y los resultados.
