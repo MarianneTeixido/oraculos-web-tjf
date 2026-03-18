@@ -258,6 +258,7 @@ Para la siguiente sesión trabajaremos con:
 
 ---
 
-> **Todavía hay semillas para recolectar, y espacio en la bolsa
-de estrellas.** 𖡼.𖤣𖥧𖡼.𖤣𖥧.☘︎ ݁˖༘⋆⋆｡°✩.✩₊˚.⋆☾⋆⁺₊✧
+> **"Todavía hay semillas para recolectar, y espacio en la bolsa
+de estrellas."** 𖡼.𖤣𖥧𖡼.𖤣𖥧.☘︎ ݁˖༘⋆⋆｡°✩.✩₊˚.⋆☾⋆⁺₊✧
+
 Úsula K. Leguin
