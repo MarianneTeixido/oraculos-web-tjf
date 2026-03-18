@@ -17,7 +17,7 @@ Estas trabajan en diseñar tecnologías (más) seguras, diversas e inclusivas, e
 
 ---
 
-![mapa](img/mapa-fondo-blanco.png)
+![Oráculos](./img/mapa-fondo-blanco.png)
 
 ## Estructura del taller
 
