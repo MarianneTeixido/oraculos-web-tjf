@@ -29,16 +29,17 @@ Estas trabajan en diseñar tecnologías (más) seguras, diversas e inclusivas, e
 
 ### Proyectos oraculares
 - [Morgan - Morgana's Almanac & Divination](https://www.sleepbot.com/morgan/index_p.html)
-- [Oráculo Transfeminista Al Borde](https://mujeresalborde.org/wp-content/uploads/2020/08/Finalizado-Or%C3%A1culo-Transfeminista-Al-Borde_compressed.pdf)
-- [Mujeres Al Borde - Oráculo Transfeminista](https://mujeresalborde.org/oraculo-transfeminista/)
+- [Oráculo Transfeminista Al Borde (PDF)](https://mujeresalborde.org/wp-content/uploads/2020/08/Finalizado-Or%C3%A1culo-Transfeminista-Al-Borde_compressed.pdf)
+- [Mujeres Al Borde - Oráculo Transfeminista (Documentación web)](https://mujeresalborde.org/oraculo-transfeminista/)
 - [Transfeministech - Coding Rights](https://transfeministech.codingrights.org/)
-- [El Oráculo - Argentina](https://eloraculo.com.ar/)
+- [Oráculo Capturas de Pantalla - Coni Rosman](https://eloraculo.com.ar/)
 - [River Oracle - Riikka Tauriainen](http://riikkatauriainen.net/river_oracle/)
 - [Mónica Alcázar Duarte - Proyectos](https://www.monicaalcazarduarte.com/projects)
-- [Fake Cheese](https://fakecheese.me/)
+- [Fake Cheese chatbot](https://fakecheese.me/)
 - [Roma Blanco](https://www.romablanco.com/)
 - [Esoteric Codes](https://esoteric.codes/)
 - [xnzero - OpenProcessing](https://openprocessing.org/user/137499/#sketches)
+
 
 ### Trans Hack Feminismo
 - [THF - Spideralex](https://zoiahorn.anarchaserver.org/thf2022/2024/03/04/la-infraestructura-feminista-como-creacion-de-lo-que-nos-sostiene-spideralex/)
@@ -47,7 +48,7 @@ Estas trabajan en diseñar tecnologías (más) seguras, diversas e inclusivas, e
 - [Amigas Hacker Club](https://amigashacker.club/)
 
 ### Libros y publicaciones
-- [Compost Engineers - Lucía Egaña](https://luciaegana.net/wp-content/uploads/2024/10/compost_engineers.pdf)
+- [Compost Engineers - Lucía Egaña y Joana Varon](https://luciaegana.net/wp-content/uploads/2024/10/compost_engineers.pdf)
 
 ---
 
@@ -172,10 +173,13 @@ Muchos sistemas funcionan como interfaces de consulta simbólica:
 - **Crear sistemas de orientación comunales,** no individuales.
 - **Utilizar el glitch, el código, el sonido y la interacción** como medios adivinatorios.
 
-### Artistas y referencias THF
+### Artistas y referencias artísticas - mágicas
 - [Mónica Alcázar Duarte - Lightwork](https://www.lightwork.org/archive/monica-alcazar-duarte/)
-- [Ana Mendieta - El Ritual de la Serpiente](https://www.anamendietaartist.com/work/67f45e26-9b6f-4358-92d8-01f3c4091410-xsyhr-lgr36/67f45e26-9b6f-4358-92d8-01f3c4091410-xsyhr-lgr36/67f45e26-9b6f-4358-92d8-01f3c4091410-xsyhr-lgr36)
+- [Ana Mendieta - Siluetas](https://www.anamendietaartist.com/work/67f45e26-9b6f-4358-92d8-01f3c4091410-xsyhr-lgr36/67f45e26-9b6f-4358-92d8-01f3c4091410-xsyhr-lgr36/67f45e26-9b6f-4358-92d8-01f3c4091410-xsyhr-lgr36)
 - Profecías de Hildegarda
+- KHIPU- Constanza Piña Pardo (Corazón de Robota) 
+- Signing textiles (Shipibo Conilo) - Paola Torres Núñez del Prado
+- CODEX VIRTUALIS - Interspecifics
 
 ### Preguntas para pensar el oráculo THF
 - ¿Quién habla? ¿Quién interpreta? ¿Quién es creído/a/e?
@@ -198,8 +202,7 @@ Muchos sistemas funcionan como interfaces de consulta simbólica:
 - Traer una **pregunta** que quieran hacerle al código
 
 ### Documento colectivo
-Compartiremos un Google Doc o Notion donde cada persona escribe su sistema oracular en 2–3 líneas. Este documento se convierte en el *corpus* del taller.
-
+Compartimo un documento de [Excalidraw](https://excalidraw.com/#room=8e0bfb9f3e32bea77228,jMfagKu7S3vVgOE1p8Jvpg) para conocernos y compartir. 
 ---
 
 ## Temas transversales
