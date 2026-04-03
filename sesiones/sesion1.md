@@ -120,7 +120,7 @@ Muchos sistemas funcionan como interfaces de consulta simbólica:
 
 ---
 
-## Oráculos antiguos no griegos
+## Oráculos ancestrales 
 
 ### Mesopotamia
 - **Mari (s. XVIII a.C.):** Archivo de tablillas que documenta profetisas llamadas *āpiltu* y *muḫḫûtu* (la "extasiada"), mujeres que hablaban en nombre de dioses como Dagan e Ishtar.
@@ -135,7 +135,6 @@ Muchos sistemas funcionan como interfaces de consulta simbólica:
 
 ### África
 - **Ifa Yoruba:** [Centro Yoruba](https://centroyoruba.blogspot.com/2014/02/el-sistema-oracular-de-osha-ifa.html)
-
 
 ### América
 - **Candomblé brasileño:** Las *mães de santo* ("madres de santo") como **Mãe Menininha do Gantois** (1894–1986) y **Mãe Stella de Oxóssi** (1925–2018) ejercieron autoridad oracular y política simultáneamente, resistiendo la persecución del estado.
@@ -208,7 +207,7 @@ Compartimo un documento de [Excalidraw](https://excalidraw.com/#room=8e0bfb9f3e3
 ---
 
 ## Temas transversales
-- El oráculo trans-feminista como práctica de conocimiento situado (Haraway)
+- El oráculo trans-feminista como práctica de conocimiento situado 
 - Epistemología del punto de vista desde los márgenes
 - Tecnologías del umbral
 - El cuerpo como instrumento oracular
