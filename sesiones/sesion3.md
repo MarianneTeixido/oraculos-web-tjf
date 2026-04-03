@@ -1,4 +1,4 @@
-# Sesión 3 — Deploy: sube tu oráculo al mundo 
+# Sesión 3 — Deploy: sube tu oráculo a internet 
 
 Revisión de proyectos.
 
