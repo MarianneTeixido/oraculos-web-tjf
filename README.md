@@ -30,4 +30,4 @@ El taller se desarrollará a través de sesiones teórico-prácticas, donde se c
 [ X ] [Sesion 2](./sesiones/sesion2.md) | Hipersticiones, herramientas y tecnologías para la creación de oráculos web. Desarrollo de piezas.  
 [ X ] [Sesion 3](./sesiones/sesion3.md) | Revisión de proyectos. Deploy: subir tu oráculo al mundo.   
 [ X ] [Sesion 4](./sesiones/sesion4.md) | Compartición de oráculos creados y reflexión crítica sobre el proceso y los resultados.  
-[ X ] [Sesion 5 | 14 de Abril 2026](./sesiones/sesion5.md) | Cierre del taller, compilación de oráculos y perspectivas futuras.   
+[  ] Sesion 5 | 14 de Abril 2026 | Cierre del taller, compilación de oráculos y perspectivas futuras.   
