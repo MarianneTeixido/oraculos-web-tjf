@@ -219,15 +219,6 @@ nombre: `oraculo` (o el que quieras)
 
 ---
 
-## Bloque práctico — meta del día
-
-> Que cada participante termine la sesión con **al menos una URL pública** para su oráculo, aunque sea una página placeholder.
-
-**Sugerencia de dinámica:** formar duetos de apoyo mezclando niveles técnicos.  
-Los más avanzados hacen su propio deploy mientras apoyan a quienes tienen dudas.
-
----
-
 ## Tarea para la próxima sesión
 
 Documentar el oráculo en un `README.md` dentro de su repo. Debe incluir:
@@ -248,21 +239,6 @@ Documentar el oráculo en un `README.md` dentro de su repo. Debe incluir:
 - [Render — deploy de Python](https://render.com/docs/deploy-flask)
 - [Observable — publicar notebooks](https://observablehq.com/@observablehq/publishing)
 
----
 
-## Notas de la sesión
-
-> *Llenar durante o después del taller*
-
-**Proyectos presentados:**
-- 
-
-**Dudas frecuentes:**
-- 
-
-**Pendientes para sesión 4:**
-- 
-
----
 
 *Sesión anterior: [sesion2.md](sesion2.md)*
